@@ -25,36 +25,43 @@ Multi-layer Perceptron classifier connects to a Neural Network. Unlike other cla
 Random Forest Model :
 First we create a random forest and then we make a prediction from the random classifier created. First we randomly select x features from total y features. Among the x features, we calculate the node d and split the node into daughter nodes using best split. We repeat the same until we create all the trees. Then we take the test features and predict the outcome using rules of each randomly created decision tree. We calculate the votes for each predicted target and we consider the high voted predicted target as the final prediction from the random forest algorithm.
 Result :
+
  ![image](https://github.com/meghana-alaparthy/News_Classification/assets/45131111/1eeba783-d141-459e-ae16-b971655cb626)
 
 Ada Boost Classifier :
 Initially, Adaboost selects a training subset randomly. It iteratively trains the Adaboost machine learning model. It selects the training set based on the accurate prediction of the last training. It assigns higher weight to wrong classified observations. Also, it assigns the weight to the trained classifier in each iteration according to the accuracy of the classifier. The more accurate classifier will get high weight. This process iterate until the complete training data fits without any error or until reached to the specified maximum number of estimators. To classify, perform voting. In this we use max_depth=1 to tell our model that we would like our forest to be composed of trees with a single decision node and two leaves. n_estimators refers to the total number of trees in the forest.
 Result :
+
  ![image](https://github.com/meghana-alaparthy/News_Classification/assets/45131111/72a193e1-e1b4-444c-8f0c-e2e7c93e9df9)
 
 Gradient Boost Classifier :
 First we optimize the loss function, then we make predictions using a weak learner and then add weak learners using additive model to minimize the loss function. In this, max_depth refers to the number of leaves of each tree  whereas n_estimators refers to the total number of trees in the ensemble. The learning_rate scales the contribution of each tree. If you set it to a low value, you will need more trees in the ensemble to fit the training set, but the overall variance will be lower.
 Result :
+
  ![image](https://github.com/meghana-alaparthy/News_Classification/assets/45131111/53618370-2319-40b2-856a-284b2c6e97e6)
 
 Multinomial Naïve Bayes :
 First, we calculate the probability of data by the class they belong, which is called the base rate. We calculate the mean and standard deviation from the dataset which are required to calculate further probabilities. Then we summarize data by class. Now, we calculate the probability or likelihood which is the conditional probability of a word occuring in a document given that the document belongs to a particular category. Finally, we calculate P(Category/Document).
 P(Category/Document) = P(Category) * P(Word1/Category) * P(Word2/Category) * ………
 Result :
+
  ![image](https://github.com/meghana-alaparthy/News_Classification/assets/45131111/465917c3-20b2-40cb-a094-d47197452012)
 
 Support Vector Classification :
 In this, we have to find a hyperplane in an N-dimensional space (N – the number of features) that distinctly classifies the data points. This is implemented in practise using a kernel. First, we import some data and we only take first two features. Hyperplane’s dimension depends upon the number of features. If we have 2 input features, then the hyperplane is just a line and if we have 3 input features, then the hyperplane becomes a two-dimensional plane. We create an instance of support vector machine and fit out data.  As we want to plot the support vectors, we do not scale our data. Then we create a mesh to plot in. 
 Result :
+
  ![image](https://github.com/meghana-alaparthy/News_Classification/assets/45131111/7b5f0fec-0bfb-434a-b472-eab59e63404f)
 
 Multilayer Perceptron :
 In the multilayer perceptron, there are combinations of layers which are combinations of neurons. The first layer will be the input layer, the last layer will be the output layer and all the middle layers will be the hidden layers. First, we prepare data to train on a neural network. Then the network processes the input upward activating neurons as it goes to finally produce an output value. We compare the output of the network with the expected output and we calculate the error. This error is then propagated back through the network and the weights are updated according to the amount that they contributed to the error. We use our neural network to make predictions as it is trained.
 Result :
+
  ![image](https://github.com/meghana-alaparthy/News_Classification/assets/45131111/57cfa844-8b7a-42bf-8f67-fe8f5a14e219)
 
 By comparing our results, we can say that the Multinomial Naïve Bayes Classifier works the best and especially it has good and greater f1-score. 
 So, on running Multinomial Naïve Bayes on our test data, we got the following result :
+
  ![image](https://github.com/meghana-alaparthy/News_Classification/assets/45131111/6ada6ac7-5025-4d0c-9245-676ccece0150)
 
 ## Conclusion and Limitations
